@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advance Js</title>
+    <script>
+        function *generateit() {
+            let yArray = [yield,yield,yield];
+            console.log(`Result : ${yArray[2]}`);
+        }
+
+        let g = generateit();
+        g.next();
+        g.next("PHP");
+        g.next("Python");
+        g.next("Java");
+        g.next(800);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

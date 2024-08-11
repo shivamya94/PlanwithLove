@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "salman Khan",
+        "age" : "25",
+        "city" : "Goa"
+    },
+    {
+        "name" : "Virat Kohli",
+        "age" : "56",
+        "city" : "Agra"
+    }
+]
