@@ -1,3 +1,12 @@
 export default function App() {
-    return <div>Random Gif</div>
+    return (
+
+        <div className="w-full h-screen flex-col background ">
+            <h1 className="">RANDOM GIFS</h1>
+             <div className="flex flex-col">
+                <Random />
+                <Tag />
+             </div>
+        </div>
+    )
 }
