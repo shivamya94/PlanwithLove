@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 /*Css background-image generated https://10015.io/tools/css-background-pattern-generator */
-
+/* 
 .background {
     background-image: radial-gradient(#ffffff 2.5px, transparent 2.5px), radial-gradient(#ffffff);
     background-size: 36px 36px;
     background-position: 0 0, 18px 18px;
     background-color: #b1d2ff;
-}
+} */
 
 
 /* css loader generated using https://10015.io/tools/css-loader-generator */
-.spinner {
+/* .spinner {
     margin: 40px;
     width: 11.2px;
     height: 11.2px;
@@ -26,4 +26,4 @@
     to {
         transform: rotate(360deg);
     }
-}
+} */
