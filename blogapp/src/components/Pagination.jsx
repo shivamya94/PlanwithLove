@@ -3,7 +3,7 @@ import { AppContext } from '../context/AppContext'
 
 const Pagination = () => {
 
-   const {page} = useContext(AppContext);
+   const {page,handlePageChange,totalPages} = useContext(AppContext);
 
   return (
     <div>
@@ -14,12 +14,16 @@ const Pagination = () => {
           </button>
         }
 
-        {
-          <button>
+        { page < totalPages && 
+          <button onClick={() =>handlePageChange(page+1)}>
               Next 
           </button>
-
         }
+
+        <p>
+           Page {page} of {totalPages}
+        </p>
+
       </div>
     </div>
   )
