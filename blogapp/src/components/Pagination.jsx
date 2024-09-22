@@ -9,15 +9,17 @@ const Pagination = () => {
     <div>
       <div>
         { page > 1 && 
-          <button onClick={() => handlePageChange(page-1)}>
+          (<button onClick={() => handlePageChange(page-1)}>
             Previous
-          </button>
+          </button>)
+        
+          
         }
 
         { page < totalPages && 
-          <button onClick={() =>handlePageChange(page+1)}>
-              Next 
-          </button>
+                 (<button onClick={() =>handlePageChange(page+1)}>
+                 Next 
+                </button>) 
         }
 
         <p>
