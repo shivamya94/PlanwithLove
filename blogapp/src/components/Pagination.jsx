@@ -16,7 +16,7 @@ const Pagination = () => {
             Previous
           </button>)
           
-        }
+        } 
 
         { page < totalPages && 
                  (<button
