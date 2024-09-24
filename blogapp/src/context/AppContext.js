@@ -12,9 +12,15 @@ export function AppContextProvider({children}) {
     const [totalPages, setTotalPages] = useState(null);
 
     //data filling pending
-    async function fetchBlogPosts(page = 1) {
+    const  fetchBlogPosts = async(page = 1, tag=null, category) => {
         setLoading(true);
         let url = `${baseUrl}?page=${page}`;
+        if(tag) {
+            url += `&tag=${tag}`;
+        }
+        if(category) {
+            url += `&category=${category}`
+        }
         try {
             const result = await fetch(url);
             const data = await result.json();
@@ -37,8 +43,11 @@ export function AppContextProvider({children}) {
         
     }
 
-    function handlePageChange(page) {
+    //Handle When Next and Previous button are clicked
+
+    const handlePageChange =(page)=> {
         setPage(page);
+        console.log(page);
         fetchBlogPosts(page);
 
     }
