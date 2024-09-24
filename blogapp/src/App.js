@@ -24,7 +24,7 @@ export default function App() {
       const category =location.pathname.split("/").at(-1).replaceAll("-","-");
       fetchBlogPosts(Number(page), null , category);
     }
-    else {
+    else { 
       fetchBlogPosts(Number(page));
     }
   },[location.pathname, location.search]);
