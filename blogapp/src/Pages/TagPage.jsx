@@ -1,5 +1,8 @@
 import React from 'react'
 import { useLocation, useNavigation } from 'react-router-dom'
+import Pagination from '../components/Pagination';
+import Blogs from '../components/Blogs';
+import Header from '../components/Header';
 
 const TagPage = () => {
 
@@ -19,6 +22,8 @@ const TagPage = () => {
                 Blogs Tagged <span>#{tag}</span> 
             </h2>
         </div>
+        <Blogs/>
+        <Pagination/>
 
     </div>
   )

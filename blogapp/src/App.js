@@ -4,7 +4,11 @@ import Pagination from "./components/Pagination";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./context/AppContext";
 import "./App.css"
-import {Route, Routes, useLocation, useSearchParams} from "react-router-dom"
+import {Route, Routes, useLocation, useSearchParams} from "react-router-dom";
+import Home from "./Pages/Home";
+import BlogPage from "./Pages/BlogPage";
+import TagPage from "./Pages/TagPage";
+import CategoryPage from "./Pages/CategoryPage";
 
 export default function App() {
   const {fetchBlogPosts} = useContext(AppContext);
