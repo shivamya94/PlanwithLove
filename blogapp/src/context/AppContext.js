@@ -50,7 +50,7 @@ export function AppContextProvider({children}) {
         console.log(page);
         fetchBlogPosts(page);
 
-    }
+    };
 
     const value = {
         posts,
