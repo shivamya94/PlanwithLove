@@ -1,7 +1,16 @@
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useDispatch } from "react-redux";
+import { toast } from "react-hot-toast";
+import { remove } from "../redux/Slices/CartSlice";
 
 
 const CartItem = ({item ,itemIndex}) => {
+    const dispatch = useDispatch();
+
+    const removeFromCart = () => {
+        dispatch(remove(item.id));
+        toast.success("Item Removed");
+    }
     return (
         <div>
 
@@ -15,8 +24,9 @@ const CartItem = ({item ,itemIndex}) => {
                     <h1>{item.description}</h1>
                     <div>
                         <p>{item.price}</p>
-                        <div>
-                        <RiDeleteBin6Line />
+                        <div
+                         onClick={removeFromCart}>
+                          <RiDeleteBin6Line />
                         </div>
                     </div>
                  </div>
