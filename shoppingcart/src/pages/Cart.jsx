@@ -17,7 +17,7 @@ const Cart = () => {
         <div>
      {
         cart.length > 0 ?
-        (<div>
+        (<div className="flex justify-around">
             <div>
                 {
                     cart.map( (item,index) => {
@@ -26,11 +26,12 @@ const Cart = () => {
                 }
             </div>
 
-            <div>
+            <div className="flex flex-col">
 
-                <div>
-                    <div>Your Cart</div>
-                    <div>Summary</div>
+                <div className="flex flex-col items-center justify-between
+                 gap-1 p-2 mt-10 ml-5 rounded-xl ">
+                    <div className="text-green-700 font-semibold text-xl mt-5 uppercase">Your Cart</div>
+                    <div className="text-green-700 font-semibold text-3xl uppercase">Summary</div>
                     <p>
                         <span>Total Item: {cart.length}</span>
                     </p>
@@ -39,8 +40,8 @@ const Cart = () => {
 
                 <div>
                     <p>Total Amount: ${totalAmount}</p>
-                    <button>
-                        CheckOut Now
+                    <button className="bg-green-800 text-white">
+                        Checkout Now
                     </button>
 
                 </div>
