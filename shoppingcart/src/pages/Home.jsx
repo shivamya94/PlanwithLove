@@ -34,7 +34,7 @@ const Home = () => {
             {
                 loading ? <Spinner/> :
                 posts.length > 0 ?
-                (<div>
+                (<div className="">
                     {
                          posts.map( (post) => (
                             <Product key = {post.id} post ={post}/>
@@ -43,7 +43,7 @@ const Home = () => {
                     }
                    
                 </div>) :
-                <div>
+                <div className="flex justify-center items-start">
                     <p>No Data Found</p>
                 </div>
             }
