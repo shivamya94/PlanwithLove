@@ -40,7 +40,7 @@ const Cart = () => {
 
                 <div>
                     <p>Total Amount: ${totalAmount}</p>
-                    <button className="bg-green-800 text-white">
+                    <button className="bg-green-800 text-white px-8">
                         Checkout Now
                     </button>
 
